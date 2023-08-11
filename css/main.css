@@ -157,7 +157,7 @@ img {
   transition: 0.4s all;
 }
 .info__btn:hover {
-  background-color: #363b63;
+  background-color: hsl(4, 100%, 67%);
 }
 
 .img__box {
@@ -180,7 +180,7 @@ img {
   width: 100%;
 }
 .success__btn:hover {
-  background-color: #363b63;
+  background-color: hsl(4, 100%, 67%);
 }
 
 .hidden {

@@ -203,7 +203,7 @@ img {
     transition: 0.4s all;
 
     &:hover {
-      background-color: lighten($dark-slate-grey, 10%);
+      background-color: hsl(4, 100%, 67%);
     }
   }
 }
@@ -231,7 +231,7 @@ img {
     width: 100%;
 
     &:hover {
-      background-color: lighten($dark-slate-grey, 10%);
+      background-color: hsl(4, 100%, 67%);
     }
   }
 }
