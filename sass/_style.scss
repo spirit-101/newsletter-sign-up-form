@@ -1,0 +1,241 @@
+@use "sass:math";
+
+// RESETS
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  max-inline-size: 100%;
+  block-size: auto;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+  border: none;
+}
+
+// PIXEL -> REM (FUNC)
+$html-font-size: 16px;
+@function stripUnit($value) {
+  @return math.div($value, ($value * 0 + 1));
+}
+@function rem($pxValue) {
+  @return #{math.div(stripUnit($pxValue), stripUnit($html-font-size))}rem;
+}
+
+// VARIABLES
+
+$dark-slate-grey: hsl(234, 29%, 20%);
+$charcoal-grey: hsl(235, 18%, 26%);
+$grey: hsl(231, 7%, 60%);
+$white: hsl(0, 0%, 100%);
+
+// STYLING
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: rem(18px);
+  font-weight: 400;
+  line-height: 1.1;
+
+  background-color: $dark-slate-grey;
+  min-height: 100vh;
+
+  display: grid;
+  place-content: center;
+}
+
+img {
+  max-width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.container {
+  max-width: rem(1100px);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  gap: rem(40px);
+
+  border-radius: 14px;
+  overflow: hidden;
+  padding: rem(15px) rem(24px);
+
+  background-color: $white;
+}
+
+.heading {
+  &__primary {
+    color: $dark-slate-grey;
+    font-size: rem(48px);
+    margin-bottom: rem(26px);
+  }
+
+  &__secondary {
+    font-size: rem(50px);
+    color: $dark-slate-grey;
+    margin-bottom: rem(30px);
+  }
+}
+
+.info {
+  &__box {
+    color: $charcoal-grey;
+    padding: 0 rem(22px);
+  }
+
+  &__text {
+    font-size: rem(16px);
+    margin-bottom: rem(20px);
+    max-width: rem(400px);
+    line-height: 1.3;
+  }
+
+  &__list {
+    margin-bottom: rem(28px);
+
+    &-item {
+      display: flex;
+      align-items: center;
+      gap: rem(10px);
+
+      font-size: rem(17px);
+      color: $dark-slate-grey;
+      line-height: 1.7;
+    }
+  }
+
+  &__form {
+    &-input {
+      display: flex;
+      flex-direction: column;
+      gap: rem(8px);
+      // margin-bottom: rem(26px);
+
+      & label {
+        font-size: rem(14px);
+        font-weight: 700;
+      }
+
+      & input {
+        outline: solid 1px $grey;
+        padding: rem(15px) rem(10px);
+        border-radius: 7px;
+        margin-bottom: rem(14px);
+        font-size: rem(14px);
+
+        &:focus {
+          border: 2px solid $grey;
+        }
+
+        &:invalid:focus {
+          border: 2px solid hsl(4, 100%, 67%);
+        }
+
+        &:valid {
+          border: 2px solid hsl(120, 40%, 60%);
+        }
+      }
+
+      & ::placeholder {
+        color: $grey;
+        font-size: rem(16px);
+      }
+    }
+
+    &-labels {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    &-error {
+      display: none;
+      text-transform: uppercase;
+      letter-spacing: 1.1px;
+      color: hsl(4, 100%, 67%);
+      font-weight: 700;
+      font-size: rem(12px);
+    }
+  }
+
+  &__btn {
+    background: none;
+    cursor: pointer;
+
+    background-color: $dark-slate-grey;
+    color: #fff;
+    padding: rem(20px) 0;
+    font-size: rem(14px);
+    font-weight: 500;
+    border-radius: 9px;
+    transition: 0.4s all;
+
+    &:hover {
+      background-color: lighten($dark-slate-grey, 10%);
+    }
+  }
+}
+
+.img__box {
+  justify-self: end;
+}
+
+// SUCCESS
+.success {
+  padding: rem(40px) rem(22px);
+  max-width: rem(420px);
+
+  &__img {
+    margin-bottom: rem(40px);
+  }
+
+  &__btn {
+    background: none;
+    cursor: pointer;
+
+    background-color: $dark-slate-grey;
+    color: #fff;
+    margin-top: rem(20px);
+    width: 100%;
+
+    &:hover {
+      background-color: lighten($dark-slate-grey, 10%);
+    }
+  }
+}
+
+.hidden {
+  display: none;
+}

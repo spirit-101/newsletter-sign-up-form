@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="css/main.css" />
+    <script defer src="script.js"></script>
+
+    <title>
+      Frontend Mentor | Newsletter sign-up form with success message
+    </title>
+  </head>
+  <body>
+    <main>
+      <!-- Sign-up form start -->
+      <div class="container">
+        <div class="info__box">
+          <h1 class="heading__primary">Stay updated!</h1>
+          <p class="info__text">
+            Join 60,000+ product managers receiving monthly updates on:
+          </p>
+          <ul class="info__list">
+            <li class="info__list-item">
+              <img
+                src="assets/images/icon-list.svg"
+                alt=""
+                aria-hidden="true"
+              />
+              <p>Product discovery and building what matters</p>
+            </li>
+            <li class="info__list-item">
+              <img
+                src="assets/images/icon-list.svg"
+                alt=""
+                aria-hidden="true"
+              />
+              <p>Measuring to ensure updates are a success</p>
+            </li>
+            <li class="info__list-item">
+              <img
+                src="assets/images/icon-list.svg"
+                alt=""
+                aria-hidden="true"
+              />
+              <p>And much more!</p>
+            </li>
+          </ul>
+
+          <form class="info__form" name="sign-up">
+            <div class="info__form-input">
+              <div class="info__form-labels">
+                <label for="email">Email address</label>
+                <p class="info__form-error">Valid email required</p>
+              </div>
+              <input
+                id="email"
+                class="form__input"
+                type="email"
+                placeholder="email@company.com"
+                name="email"
+                required
+              />
+              <button class="info__btn" type="button">
+                Subscribe to monthly newsletter
+              </button>
+            </div>
+          </form>
+        </div>
+
+        <div class="img__box">
+          <img
+            src="assets/images/illustration-sign-up-desktop.svg"
+            alt=""
+            aria-hidden="true"
+          />
+        </div>
+        <!-- SUCCESS -->
+        <div class="success hidden">
+          <img
+            src="assets/images/icon-success.svg"
+            alt=""
+            aria-hidden="true"
+            class="success__img"
+          />
+          <h2 class="heading__secondary">Thanks for subscribing!</h2>
+          <p class="info__text success__text"></p>
+          <button class="info__btn success__btn" type="button">
+            Dismiss message
+          </button>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
