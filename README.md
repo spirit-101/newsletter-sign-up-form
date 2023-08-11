@@ -6,7 +6,7 @@
 
 🌐 [View the live site](https://spirit-101.github.io/newsletter-sign-up-form/)
 
-🧠 [Check out the solution](https://www.frontendmentor.io/solutions/clipboard-landing-page-bcebJ-jbEW)
+🧠 [Check out the solution](https://www.frontendmentor.io/solutions/newsletter-signup-form-with-success-message-WJg63kM9mk)
 
 📝 [View the challenge](https://www.frontendmentor.io/challenges/newsletter-signup-form-with-success-message-3FC1AZbNrv)
 
